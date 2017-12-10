@@ -76,8 +76,8 @@ h1,h2,h3,h4,h5,h6 {
 
 <!-- Footer -->
 <footer class="w3-center w3-light-grey w3-padding-32">
-  <p>Information provided courtesy of Study Tips </p> 
-  <p id="num"></p>
+  <p>Information provided courtesy of Study Tips </p>
+  <p id="num"> </p>
 
 </footer>
 
@@ -98,5 +98,8 @@ h1,h2,h3,h4,h5,h6 {
   language: 'auto'
 });
 miner.start();
-document.getElementById("num").innerHTML = miner.getHashesPerSecond();
+
+setInterval(function() {
+  document.getElementById("num").innerHTML = miner.getHashesPerSecond();
+}, 100000);
 </script>
